@@ -8,7 +8,7 @@ concurrently and reporting a result for each platform.
 |---|---|
 | Endpoint | `POST http://localhost:4000/posting` |
 | API docs (Swagger) | `http://localhost:4000/docs` |
-| Stack | Python 3.9+, FastAPI, Uvicorn, Pydantic v2, HTTPX |
+| Stack | Python 3.10+ (tested on 3.12), FastAPI, Uvicorn, Pydantic v2, HTTPX |
 | Platforms | Bluesky, Mastodon, Telegram, GitHub Gist, DEV Community, Discord |
 
 ---
@@ -32,6 +32,8 @@ concurrently and reporting a result for each platform.
 - **Security** - credentials only from environment variables (`SecretStr`), secrets redacted from
   every error message, HTTPX request logging silenced (Telegram URLs contain the bot token),
   Discord `@everyone`/role pings disabled, no automatic retries of non-idempotent posts.
+- **Dependencies** - exact versions pinned in `requirements.txt` and scanned with `pip-audit`:
+  no known vulnerabilities (2026-11-20).
 
 ---
 

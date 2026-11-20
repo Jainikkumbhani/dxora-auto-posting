@@ -263,8 +263,7 @@ def test_one_platform_failure_does_not_stop_others(make_client):
         "date": None,
         "time": None,
         "error": (
-            "Mastodon post failed: HTTP 401 - "
-            "Authentication failed: The access token is invalid"
+            "Mastodon post failed: HTTP 401 - Authentication failed: The access token is invalid"
         ),
     }
     assert "HTTP 500" in by_platform["DEV Community"]["error"]
